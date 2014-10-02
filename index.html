@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS de reset para todos os browsers -->
 	<link rel="stylesheet" href="css/style.css"> <!-- CSS principal -->
@@ -17,16 +18,17 @@
 <body>
 	<header id="kinda-header">
 		<div class="kinda-container">
-			<div id="cd-logo">
+			<h1 id="cd-logo">
 				<a href="#"></a>
-			</div>		
+				<span>kinda - pouco que interessa</span>
+			</h1>		
 			<nav class="kinda-principal-nav"><!-- kinda-principal-nav -->
 				<ul>
 					<!-- inserir mais links aqui -->
-					<li><a  href="#poucoQueIntereca" class="r1" class="r1 selecionado">O pouco que interessa</a></li>
-					<li><a href="#fiquePorDentro" class="r2">fique por dentro</a></li>
-					<li><a href="#temosQueMostrar" class="r3">Temos a mostrar</a></li>
-					<li><a href="#junteSeNos" class="r4">Junte-se a nós</a></li>
+					<li><h2><a href="#poucoQueIntereca" id="r1" class="r1">O pouco que interessa</a></li>
+					<li><h2><a href="#fiquePorDentro" id="r2" class="r2">fique por dentro</a></li>
+					<li><h2><a href="#temosQueMostrar" id="r3" class="r3">Temos a mostrar</a></li>
+					<li><h2><a href="#junteSeNos" id="r4" class="r4">Junte-se a nós</a></li>
 				</ul>
 			</nav> 
 			<div class="fundoMenuMobile"></div>
@@ -63,7 +65,7 @@
 
 				<header>
 					<data>15 de junho</data>
-					<h2>Kinda conquista conta da multiplan para liquidação lápis vermelho</h2>
+					<h3>Kinda conquista conta da multiplan para liquidação lápis vermelho</h3>
 				</header>
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non urna luctus, facilisis dui ac, pretium tortor. Cras sed porttitor urna, eu tristique augue. Morbi malesuada sed nunc et pellentesque. Cras molestie tortor diam, a laoreet nisl fringilla at. Praesent congue condimentum eros, at egestas tortor pellentesque nec. Praesent tincidunt turpis sed congue mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur tempus neque vitae felis placerat, vel posuere nibh gravida. Vestibulum vestibulum faucibus eros ac vulputate. Etiam elit sem, sagittis ut ultricies vitae, commodo at nisl. Etiam mattis quis diam quis tempus. Nulla at ultrices nulla. Nam vel pretium purus, eget sollicitudin magna. Quisque a lorem in augue dapibus porttitor a vel nisl.</p>
@@ -79,16 +81,6 @@
 				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
 				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
 				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  <div class="noticias-preview"><data>15 de julho</data>Kinda conquista conta da multiplan para liquidação lápis vermelho</div>
-				  
 				</div>
 				
 			</article>
@@ -102,17 +94,72 @@
 		<div class="posicao"></div>			
 			<div class="kinda-container">
 				<nav class="botoesTemosMostrar">
-					<a href="#">Liquidaçãvo lápis vermelho</a>
-					<a href="#">Barra shopping</a>
-					<a href="#">clubmed</a>
-					<a href="#">shopping recife</a>
+					<div class="botoesTemosMostrarTrabalho port01">Liquidaçãvo lápis vermelho</div>
+					<div class="botoesTemosMostrarTrabalho port02">Barra shopping</div>
+					<div class="botoesTemosMostrarTrabalho port03">clubmed</div>
+					<div class="botoesTemosMostrarTrabalho port04">shopping recife</div>
 				</nav>
-				<div class="owl-carousel-temosQueMostrar" id="owl-carousel-temosQueMostrar">
-				  <div class=""><img src="img/lapis-vermelho.png" height="672" width="629" alt=""></div>
-				  <div class=""><img src="img/lapis-vermelho.png" height="672" width="629" alt=""></div>
-				  <div class=""><img src="img/lapis-vermelho.png" height="672" width="629" alt=""></div>
-				  <div class=""><img src="img/lapis-vermelho.png" height="672" width="629" alt=""></div>
+
+				<div class="owl-carousel-temosQueMostrar" id="port01" style="background:red;">
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
 				</div>
+
+				<div class="owl-carousel-temosQueMostrar" id="port02" style="display:none; background:black;">
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				</div>
+
+				<div class="owl-carousel-temosQueMostrar" id="port03"  style="display:none; background:yellow">
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				</div>
+
+				<div class="owl-carousel-temosQueMostrar" id="port04"  style="display:none; background:blue;">
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				  <div class="">
+				  	<img src="img/lapis-vermelho.png" width="629" alt="">
+				  </div>
+				</div>
+
 			</div>
 	</main>
 
@@ -121,7 +168,6 @@
 		<div class="posicao"></div>
 		<div class="kinda-container">
 			<nav class="navFooter">
-
 				<div class="rioDeJaneiro">Rio de janeiro</div>
 				<div class="emailKinda">kinda@kinda.com.br</div>
 				<div class="telefoneKinda">21 2451.1765<br>21 9431.3676</div>		
@@ -134,9 +180,9 @@
 				</div>
 				<div class="procurandoOportunidade">procurando oportunidades ?<span>envie seu cv e setor que gostaria para team@kinda.com.br</span></div>				
 			</nav>
-			<form action="#" method="post" class="contato">			
+			<form class="contato" method="post" action="enviarEmail.php">	 		
 				<fieldset>
-					<input type="text" name="name" id="name" value="" placeholder="fala seu NOME" />
+					<input type="text" name="name" id="name" value="" placeholder="fala seu NOME"/>
 				</fieldset>
 				
 				<fieldset>					
@@ -148,7 +194,7 @@
 				</fieldset>
 			
 				<fieldset>
-					<textarea cols="40" rows="8" name="textarea" id="textarea" placeholder="o que gostaria de falar?"></textarea>
+					<textarea cols="40" rows="8" name="mensagem" id="textarea" placeholder="o que gostaria de falar?"></textarea>
 				</fieldset>
 						
 				<fieldset>

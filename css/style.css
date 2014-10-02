@@ -42,6 +42,7 @@ Módulos - peças reutilizáveis ​​de nosso design
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#cd-logo span{ font-size: 1px; display: inline; float: left; height: 1px; width: 1px; text-indent: -999999em;}
 .kinda-container::after {
   /* clearfix */
   content: '';
@@ -316,7 +317,7 @@ principais componentes
     border: 1px solid #087fbd;
   }
   #kinda-header.poucoQueIntereca #cd-logo a{
-    background-position: 0 0;
+    background-position: 0 -44px;
    } 
   #kinda-header.temosQueMostrar .kinda-principal-nav a{
     color: #171717;    
@@ -502,11 +503,12 @@ article header data{
   color: #ef2639;
   background: #ffffff;
   font-size: 12px;
+  cursor: pointer;
 }
-.contato input[type=submit]:foucus,
+.contato input[type=submit]:focus,
 .contato input[type=submit]:hover{
   color: #ffffff;
-  background: #ef2639;
+  background: #000000;
 }
 
 .navFooter{ 
@@ -655,8 +657,38 @@ main{
 nav.botoesTemosMostrar{
   display: inline-block;
   float: left;
-  max-width: 300px;
+  width: 300px;
 }
+
+.owl-carousel-temosQueMostrar .botoesTemosMostrarTrabalho{ display: none;}
+
+.botoesTemosMostrarTrabalho{
+  display: inline;
+  float: left;
+  clear: both;
+  padding: 5px 10px;
+  margin-top: 6px;
+  width: auto;
+  background: #ffffff;
+  color: #171717;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: 1px solid #d3d3d3;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.botoesTemosMostrarTrabalho a:focus,
+.botoesTemosMostrarTrabalho a:hover{
+  color: #000000;
+}
+
+
+
 nav.botoesTemosMostrar a{ display: block;}
 .owl-carousel-temosQueMostrar{
   display: inline;
@@ -667,6 +699,7 @@ nav.botoesTemosMostrar a{ display: block;}
 }
 
 @media only screen and (max-width: 768px) {
+
   .navFooter div,
   .navFooter ul,
   .navFooter nav,
@@ -740,7 +773,7 @@ nav.botoesTemosMostrar a{ display: block;}
   .temosQueMostrar .kinda-principal-nav a{ color: #444343;}
 
   #kinda-header #cd-logo a{ background-position: -91px 0; margin-top: 3px; }
-  #kinda-header.poucoQueIntereca #cd-logo a{ background-position:  -91px -44px;}
+  #kinda-header.poucoQueIntereca #cd-logo a{ background-position:  -91px -45px;}
   #kinda-header.fiquePorDentro #cd-logo a{ background-position:  -91px 0;}
   #kinda-header.temosQueMostrar #cd-logo a{ background-position:  -91px -89px;}
   #kinda-header.fundoMenuMobile #cd-logo a { background-position: -91px 0;}
@@ -771,6 +804,9 @@ nav.botoesTemosMostrar a{ display: block;}
   .navFooter .emailKinda{ 
     margin: 0 auto;
   }
+  .botoesTemosMostrarTrabalho,
+  nav.botoesTemosMostrar{ display: inline; width: 100%; text-align: center;}
+  nav.botoesTemosMostrar{ padding-bottom: 15px}
 
 }
 

@@ -2,6 +2,8 @@
 jQuery(document).ready(function(){
 
 
+
+
 	/**********************************
 	   Função para Smooth Scrolling
 	**********************************/
@@ -39,8 +41,8 @@ jQuery(document).ready(function(){
 	   funções para para carousel #owl-carousel-fiquePorDentro  
 	*************************************************************/
 
-	$('owl-carousel-temosQueMostrar').owlCarousel({
-		navigation : true, // Show next and prev buttons
+	$('#owl-carousel-fiquePorDentro').owlCarousel({
+		navigation : true, // Mostrar botões next e prev
 	    loop:true,
 	    margin:10,
 	    autoplayHoverPause:true,
@@ -60,8 +62,8 @@ jQuery(document).ready(function(){
 	
 
 
-	$('#owl-carousel-temosQueMostrar').owlCarousel({
-		navigation : true, // Show next and prev buttons
+	$('.owl-carousel-temosQueMostrar').owlCarousel({
+		navigation : true, // Mostrar botões next e prev
 	    loop:true,
 	    margin:10,
 	    autoplayHoverPause:true,
@@ -83,30 +85,36 @@ jQuery(document).ready(function(){
 	
 
 	$(window).scroll(function (){
-
-
+		
 		/**********************************
 		   funções para header da kinda 
 		**********************************/
+		$("#kinda-header .kinda-principal-nav a").removeClass("selecionado");
+
 		var poucoQueIntereca = $(".poucoQueIntereca .posicao").offset().top;
 		var fiquePorDentro = $(".fiquePorDentro .posicao").offset().top;
 		var temosQueMostrar = $(".temosQueMostrar .posicao").offset().top;
 		var junteSeNos = $(".junteSeNos .posicao").offset().top;
 	    var  scrollTop = $(this).scrollTop();
 	    var cssClass = '';
+	    
 
 		if((scrollTop >= poucoQueIntereca) && (scrollTop <= fiquePorDentro)) {      
 	        cssClass = 'poucoQueIntereca';
+	        $("#kinda-header .kinda-principal-nav a#r1").addClass("selecionado");	        
 	    }else if((scrollTop >= fiquePorDentro) && (scrollTop <= temosQueMostrar)) {     
 		    cssClass = 'fiquePorDentro';
+		    $("#kinda-header .kinda-principal-nav a#r2").addClass("selecionado");
 		}else if((scrollTop >= temosQueMostrar) && (scrollTop <= junteSeNos)) {      	        	
 			cssClass = 'temosQueMostrar';
+			$("#kinda-header .kinda-principal-nav a#r3").addClass("selecionado");
 		}else if(scrollTop >= junteSeNos) {     
 			cssClass = 'junteSeNos';
+			$("#kinda-header .kinda-principal-nav a#r4").addClass("selecionado");			
 	    }else{      
 			cssClass = '';
-	    }
-
+			$("#kinda-header .kinda-principal-nav a").removeClass("selecionado");
+	    }	    		
 	    $("#kinda-header").removeClass();
 	    $("#kinda-header").addClass(cssClass);
 
@@ -116,6 +124,7 @@ jQuery(document).ready(function(){
 	   adiciona e remove class selecionado nos links do menu
 	*************************************************************/
 	function trocaSelecionado(nomeItem) {
+
         $("#kinda-header .kinda-principal-nav a").removeClass("selecionado");
         $("#kinda-header .kinda-principal-nav a."+nomeItem).addClass("selecionado");
     }
@@ -126,13 +135,35 @@ jQuery(document).ready(function(){
         $(".r3").click(function() {trocaSelecionado("r3");});
 	    $(".r4").click(function() {trocaSelecionado("r4");});    
 
-
-	          
+		$("#kinda-header #cd-logo a").click(function() {
+			$("#kinda-header .kinda-principal-nav a").removeClass("selecionado");
+		});   
 	});
 
+
+
+	/*************************************************************
+	   adiciona e remove class para aparecer portifolio na seção temosQueMostrar
+	*************************************************************/
+	 function trocaSelecionadoPort(nomeItem) {
+
+      $(".botoesTemosMostrarTrabalho ").removeClass("selecionado");
+      $(".botoesTemosMostrarTrabalho."+nomeItem).addClass("selecionado");
+        $(".owl-carousel-temosQueMostrar").fadeOut(0);
+      		$('.owl-carousel-temosQueMostrar#'+nomeItem).fadeIn(600, function(){
+      	});
+    }
 	
+	$(document).ready(function () {
+        $(".port01").click(function() {trocaSelecionadoPort("port01");});
+        $(".port02").click(function() {trocaSelecionadoPort("port02");});
+        $(".port03").click(function() {trocaSelecionadoPort("port03");});
+	    $(".port04").click(function() {trocaSelecionadoPort("port04");});    
 
-
+		$("#kinda-header #cd-logo a").click(function() {
+			$("#kinda-header .kinda-principal-nav a").removeClass("selecionado");
+		});   
+	});
 
 });
 
